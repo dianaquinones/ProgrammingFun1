@@ -1,25 +1,15 @@
-void draw() {
-  if (mousePressed == true) {
-    point(mouseX,mouseY);
-  }
+void setup() {
+  size(400,300);
+  background(0);
+  noStroke();
 }
 
-void keyPressed() {
-  if (key == 's') {
-    save("my_drawing.png");
-  }
-  if (key == 'b') {
-    background(random(255), random(255), random(255));
-    draw_top_line();
-  }
-  if (key == 'c') {
-    stroke(random(255), random(255), random(255));
-    draw_top_line();
-  }
-}
-void draw_top_line() {
-    strokeWeight(7);
-    line(0,0, width, 0);
-    strokeWeight(2);
+void draw() {
+  //background(0);
+  fill(0, 50);
+  rect(0, 0, width, height);
+  
+  fill(255);
+  ellipse(random(width), random(height), 3, 3);
 }
 
